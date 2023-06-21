@@ -4,11 +4,11 @@
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
-  output: 'export',
-  basePath: '/gh-pages-test',
+  output: "export",
+  basePath: "/jolanda",
   experimental: {
-    appDir: true,
+    appDir: false,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
