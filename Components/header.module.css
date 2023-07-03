@@ -1,0 +1,32 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: 2px solid black; */
+}
+.imagestyle {
+  width: 200px;
+  /* border: 1px solid teal; */
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 65px;
+  justify-content: center;
+}
+.webname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid black; */
+  font: 36px Libre Caslon Text;
+  padding-bottom: 0px;
+}
+.langmenu {
+  width: 200px;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  display: flex;
+  font: 16px Inknut Antiqua;
+  align-items: flex-end;
+  margin-bottom: 64.5px;
+}

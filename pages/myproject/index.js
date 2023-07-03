@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-export default function About() {
+export default function MyProject() {
   return (
-    <>
-      <h1>About page</h1>
+    <div>
+      <h1>Ha ha</h1>
       <div>
         Back to <Link href="/">Home</Link>
       </div>
-    </>
+    </div>
   );
 }
