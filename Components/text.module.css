@@ -1,0 +1,15 @@
+.textjolanta {
+  text-align: center;
+
+  /* font: 20px Inknut Antiqua; */
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+}
+
+.textaround {
+  width: 72%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
