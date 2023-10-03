@@ -4,7 +4,7 @@ export default function Headermobile() {
   return (
     <div className={styles.header}>
       <input className={styles.sidemenu} type="checkbox" id="sidemenu" />
-      <label className={styles.hamb} for="sidemenu">
+      <label className={styles.hamb} htmlFor="sidemenu">
         <span className={styles.hambline}></span>
       </label>
 

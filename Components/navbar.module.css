@@ -2,7 +2,7 @@
   position: sticky;
   top: 0px;
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
   padding-right: 20%;
   padding-left: 20%;
   height: 4em;
@@ -17,6 +17,7 @@
   font-size: 12px;
   letter-spacing: 2px;
   background-color: rgb(255, 255, 255, 0.86);
+  z-index: 3;
 }
 
 @media (max-width: 1000px) {

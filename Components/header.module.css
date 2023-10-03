@@ -1,6 +1,7 @@
 .bigheader {
   position: relative;
   top: 0px;
+  z-index: 3;
 }
 @media (max-width: 1000px) {
   .bigheader {

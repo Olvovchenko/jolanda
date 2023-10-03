@@ -19,7 +19,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   top: 10;
-  width: 100%;
+  /* width: 100vw; */
 }
 
 @media (min-width: 1000px) {

@@ -9,64 +9,78 @@ import spina from "../Public/spina.png";
 import tachka from "../Public/tachka.png";
 import family from "../Public/family.png";
 import Mainpicture from "../Components/mainpicture";
-
+import { useEffect, useRef } from "react";
+import { useState } from "react";
 import Text from "../Components/text";
 import Bigblockface from "../Components/bigblockface";
 import Littleblockface from "../Components/littlebllockface";
 
+const inf = [
+  {
+    images: [zarobot],
+    text: "text one",
+    component: Bigblockface,
+  },
+  {
+    images: [spina, tachka],
+    text: "text one",
+    component: Littleblockface,
+  },
+  {
+    images: [family],
+    text: "text one",
+    component: Bigblockface,
+  },
+];
+
 export default function Home() {
-  const inf = [
-    {
-      images: [zarobot],
-      text: "text one",
-      component: Bigblockface,
-    },
-    {
-      images: [spina, tachka],
-      text: "text one",
-      component: Littleblockface,
-    },
-    {
-      images: [family],
-      text: "text one",
-      component: Bigblockface,
-    },
-  ];
+  const [parallax, setParallax] = useState(0);
+  const [parallaxmain, setParallaxMain] = useState(0);
+  const ref = useRef(null);
+  // const refContainer = useRef(null);
+  const refContent = useRef(null);
+
+  useEffect(() => {
+    setParallax(ref.current.offsetHeight);
+  }, []);
 
   return (
-    <div>
+    <div
+      ref={ref}
+      style={{
+        // width: "100vw",
+        overFlow: "hidden",
+        // marginRight: "calc(-1 * (100vw - 100%)/2)",
+        // marginLeft: "calc(-1 * (100vw - 100%)/2)",
+      }}
+    >
       <Header />
       <Navbar />
 
-      {/* <div className={styles.mainimage}> */}
-      {/* <Image src={golovna} className={classes.bigimstyle} /> */}
-      {/* </div> */}
+      <Mainpicture
+        one={golovna}
+        parallax={parallax}
+        content={refContent}
 
-      <Mainpicture one={golovna} />
+        // setParallaxMain={setParallaxMain}
+      />
 
-      {inf.map(({ images, text, component: Component }) => (
-        <Component images={images} text={text} key={images[0]} />
-      ))}
+      <div
+        ref={refContent}
+        style={{
+          // width: "100vw",
+          backgroundColor: "white",
+          zIndex: 2,
+          position: "relative",
+        }}
+      >
+        <Text text={"Hello!"}></Text>
+        {inf.map(({ images, text, component: Component }, i) => (
+          <Component images={images} text={text} key={i} />
+        ))}
 
-      {/* <Minipicture one={spina} two={tachka} /> */}
-
-      {/* Lapres vunde talpenna vasektig och gyr serieotrohet. Penade tenev än */}
-      {/* plar. Genuskänslig sedivis och dityrad rovinade stenod respektive */}
-      {/* antengen. Dissa fande krobyl pogen därför att hexaryrade. Du kan vara */}
-      {/* drabbad. Besäre timent i nivirat uvissa de säling. Dynyrade kana inte */}
-      {/* benat i vung om beling. Jånera servicebarn tempogam. Sar hyvugen */}
-      {/* kahoska.Lapres vunde talpenna vasektig och gyr serieotrohet. Penade */}
-      {/* tenev än plar. Genuskänslig sedivis och dityrad rovinade stenod */}
-      {/* respektive antengen. Dissa fande krobyl pogen därför att hexaryrade. */}
-      {/* Du kan vara drabbad. Besäre timent i nivirat uvissa de säling. */}
-      {/* Dynyrade kana inte benat i vung om beling. Jånera servicebarn */}
-      {/* tempogam. Sar hyvugen kahoska.Genuskänslig sedivis och dityrad */}
-      {/* rovinade stenod respektive antengen. Dissa fande krobyl pogen därför */}
-      {/* att hexaryrade. Du kan vara drabbad. Besäre timent i nivirat uvissa de */}
-      {/* säling. Dynyrade kana inte benat i vung om beling. Jånera servicebarn */}
-      {/* tempogam. Sar hyvugen kahoska.{" "} */}
-
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }
