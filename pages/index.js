@@ -39,6 +39,7 @@ export default function Home() {
   const ref = useRef(null);
   // const refContainer = useRef(null);
   const refContent = useRef(null);
+  const refHeader = useRef(null);
 
   useEffect(() => {
     setParallax(ref.current.offsetHeight);
@@ -54,13 +55,16 @@ export default function Home() {
         // marginLeft: "calc(-1 * (100vw - 100%)/2)",
       }}
     >
-      <Header />
+      <div ref={refHeader}>
+        <Header />
+      </div>
       <Navbar />
 
       <Mainpicture
         one={golovna}
         parallax={parallax}
         content={refContent}
+        header={refHeader}
 
         // setParallaxMain={setParallaxMain}
       />

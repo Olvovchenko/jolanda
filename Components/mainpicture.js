@@ -10,6 +10,7 @@ export default function Mainpicture({
   one,
   parallax,
   content,
+  header,
   // setParallaxMain,
   // refcontainer,
 }) {
@@ -40,7 +41,11 @@ export default function Mainpicture({
     });
 
     observer.observe(content.current);
-    return () => observer.unobserve(content.current);
+    observer.observe(header.current);
+    return () => {
+      observer.unobserve(content.current);
+      observer.unobserve(header.current);
+    };
   }, [parallax]);
 
   return (
