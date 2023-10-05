@@ -2,7 +2,9 @@ import Image from "next/image";
 import styles from "./headerdesctop.module.css";
 import thin from "../public/free-icon-instagram-1077042.png";
 import multi from "../public/free-icon-multimedia-2909344.png";
-import Navbar from "./navbar";
+import { Open_Sans } from "next/font/google";
+
+const opensans = Open_Sans({ subsets: ["cyrillic"] });
 
 export default function Headerdesctop() {
   return (
@@ -18,15 +20,19 @@ export default function Headerdesctop() {
           style={{
             marginTop: "20px",
             marginBottom: "10px",
+            fontSize: "36px",
+            letterSpacing: "2px",
           }}
         >
-          YOLANTA KLUSOVSKA
+          ЙОЛАНТА КЛЮСОВСЬКА
         </p>
-        <p style={{ fontSize: "15px" }}>ЛАНДШАФТНИЙ ДИЗАЙН І САДІВНИЦТВО</p>
+        <p style={{ fontSize: "18px", letterSpacing: "2px" }}>
+          МАЙСТЕРНЯ САДОВОЇ СКУЛЬПТУРИ
+        </p>
       </div>
       <div className={styles.langmenu}>
         <div>Espanol</div>
-        <div style={{ width: 24 }}></div> <div>Ukrainian</div>
+        <div style={{ width: 24 }}></div> <div>Українська</div>
       </div>
     </div>
   );

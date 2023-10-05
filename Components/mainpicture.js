@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import styles from "./picture.module.css";
 import Image from "next/image";
+import { isForStatement } from "typescript";
 const thresholdSets = [];
 for (let i = 0; i <= 1; i += 0.005) {
   thresholdSets.push(i);
@@ -18,12 +19,11 @@ export default function Mainpicture({
 
   useEffect(() => {
     function setParallaxItemStyle(scrollTopProcent, scrollY) {
-      // refcontent.current.style.cssText = `transform: translate(0%, -${
-      //   scrollTopProcent * 2
-      // }%);`;
-      main.current.style.cssText = `transform: translate(0%, -${
-        scrollTopProcent / 2
-      }%);`;
+      if (main.current) {
+        main.current.style.cssText = `transform: translate(0%, -${
+          scrollTopProcent / 2
+        }%);`;
+      }
     }
     // setParallaxMain(main.current.offsetHeight);
     const callback = function (entries, observer) {
@@ -43,8 +43,9 @@ export default function Mainpicture({
     observer.observe(content.current);
     observer.observe(header.current);
     return () => {
-      observer.unobserve(content.current);
-      observer.unobserve(header.current);
+      content.current && observer.unobserve(content.current);
+      header.current && observer.unobserve(header.current);
+      observer.disconnect();
     };
   }, [parallax]);
 
