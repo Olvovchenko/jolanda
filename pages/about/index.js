@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Header from "../../Components/header";
+import Header from "../../Components/Header/header";
 
 export default function About() {
   return (

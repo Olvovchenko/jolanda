@@ -7,13 +7,19 @@ const opensans = Open_Sans({ subsets: ["cyrillic"] });
 export default function Navbar() {
   return (
     <div className={styles.navdesctop + " " + opensans.className}>
-      <div>ПРО МЕНЕ</div>
-      <Link href="/myproject">МОЇ ПРОКЕТИ</Link>
-      <Link href="/about" style={{ fontFamily: "sans-serif" }}>
+      <Link href="/" className={styles.linkstyle}>
+        ПРО МЕНЕ
+      </Link>
+      <Link href="/myproject" className={styles.linkstyle}>
+        МОЇ ПРОКЕТИ
+      </Link>
+      <Link href="/about" className={styles.linkstyle}>
         МОЇ ПОСЛУГИ
       </Link>
       <div>МАЙСТЕРКА</div>
-      <Link href="#cont">КОНТАКТИ</Link>
+      <Link href="#cont" className={styles.linkstyle}>
+        КОНТАКТИ
+      </Link>
     </div>
   );
 }

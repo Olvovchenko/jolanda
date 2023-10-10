@@ -1,4 +1,4 @@
-import styles from "./picture.module.css";
+import styles from "./minipicture.module.css";
 import Image from "next/image";
 
 export default function Minipicture({ one, two }) {

@@ -1,5 +1,5 @@
-import Minipicture from "./minipicture";
-import Text from "./text";
+import Minipicture from "../Minipicture/minipicture";
+import Text from "../Text/text";
 
 export default function Littleblock({ images, text }) {
   const [one, two, three, four] = images;

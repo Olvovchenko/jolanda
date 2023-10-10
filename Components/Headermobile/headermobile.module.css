@@ -136,9 +136,9 @@
   justify-content: space-between;
   /* border: 1px solid rgb(64, 19, 226); */
 }
-.langmenu a {
+.langhref {
   flex-direction: row;
-  /* border: 0.01px solid black; */
+  border: 1px solid black;
   display: flex;
   font: 11px Inknut Antiqua;
 }

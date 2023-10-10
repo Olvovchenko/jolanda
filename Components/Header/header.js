@@ -1,5 +1,5 @@
-import Headerdesctop from "./headerdesctop.js";
-import Headermobile from "./headermobile.js";
+import Headerdesctop from "../Headerdesctop/headerdesctop.js";
+import Headermobile from "../Headermobile/headermobile.js";
 import styles from "./header.module.css";
 
 export default function Header() {

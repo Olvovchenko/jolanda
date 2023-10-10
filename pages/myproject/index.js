@@ -26,14 +26,15 @@ import gardennice from "../../Public/gardennice.png";
 import piano from "../../Public/piano.png";
 import street from "../../Public/street.jpg";
 
-import Header from "../../Components/header";
-import Navbar from "../../Components/navbar";
-import Text from "../../Components/text";
+import Header from "../../Components/Header/header";
+import Navbar from "../../Components/Navbar/navbar";
+import Text from "../../Components/Text/text";
 
-import Picture from "../../Components/picture";
-import Minipicture from "../../Components/minipicture";
-import Littleblock from "../../Components/littleblock";
-import Bigblock from "../../Components/bigblock";
+import Picture from "../../Components/Picture/picture";
+import Minipicture from "../../Components/Minipicture/minipicture";
+import Littleblock from "../../Components/Littleblock/littleblock";
+import Bigblock from "../../Components/Bigblock/bigblock";
+import Footer from "../../Components/Footer/footer";
 
 export default function MyProject() {
   const inf = [
@@ -73,33 +74,6 @@ export default function MyProject() {
       component: Littleblock,
     },
   ];
-  // {
-  // images: [dveri, littletreeold],
-  // text: "text two",
-  // },
-  // {
-  // one: dveriold,
-  // two: dveri,
-  // three: littletreeold,
-  // four: littletree,
-  // text: "Lapres vunde talpenna vasektig och gyr serieotrohet. Penade tene",
-  // },
-  // ];
-  // `Sar hyvugen kahoska.Lapres vunde talpenna vasektig och gyr serieotrohet.
-  // Penade tenev än plar. Genuskänslig sedivis och dityrad rovinade stenod
-  // respektive antengen. Dissa fande krobyl pogen därför att hexaryrade.
-  // Du kan vara drabbad. Besäre timent i nivirat uvissa de säling.
-  // Dynyrade kana inte benat i vung om beling. Jånera servicebarn
-  // tempogam. Sar hyvugen kahoska.Genuskänslig sedivis och dityrad
-  // rovinade stenod respektive antengen. Dissa fande krobyl pogen därför
-  // att hexaryrade. Du kan vara drabbad. Besäre timent i nivirat uvissa de
-  // säling. Dynyrade kana inte benat i vung om beling. Jånera servicebarn
-  // tempogam. Sar hyvugen kahoska.`,
-  // `Lapres vunde talpenna vasektig och gyr serieotrohet. Penade tenev
-  // plar. Genuskänslig sedivis och dityrad rovinade stenod respektive
-  // antengen. Dissa fande krobyl pogen därför att hexaryrade. Du kan vara
-  // drabbad. Besäre timent i nivirat uvissa de säling. Dynyrade kana inte
-  // benat i vung om beling. Jånera servicebarn tempogam. `,
 
   return (
     <div>
@@ -109,22 +83,7 @@ export default function MyProject() {
       {inf.map(({ images, text, component: Component }) => (
         <Component images={images} text={text} key={images[0]} />
       ))}
-
-      {/* <Picture one={bush} two={bushold} three={gardennice} /> */}
-      {/* <Text text={inf[1]} /> */}
-      {/* <Minipicture one={pictureold} two={picturenew} /> */}
-      {/* <Minipicture one={plantold} two={plant} /> */}
-      {/* <Text text={inf[2]} /> */}
-      {/* <Picture one={housebush} two={housebushone} three={piano} /> */}
-      {/* <Text text={inf[3]} /> */}
-      {/* <Minipicture one={littlebushold} two={littlebush} /> */}
-      {/* <Minipicture one={manytreeold} two={manytreenew} /> */}
-      {/* <Text text={inf[4]} /> */}
-      {/* <Picture one={treeroundold} two={treeround} three={street} /> */}
-      {/* <Text text={inf[5]} /> */}
-      {/* <Minipicture one={interesttreeold} two={interesttree} /> */}
-      {/* <Minipicture one={doubletreeold} two={doubletree} /> */}
-      {/* <Text text={inf[6]} /> */}
+      <Footer />
     </div>
   );
 }

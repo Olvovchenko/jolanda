@@ -3,8 +3,8 @@
   top: 0px;
   box-sizing: border-box;
   width: 100vw;
-  padding-right: 20%;
-  padding-left: 20%;
+  padding-right: 10%;
+  padding-left: 10%;
   height: 4em;
   padding-bottom: 1em;
   /* border: 1px solid black; */
@@ -13,11 +13,15 @@
   justify-content: space-around;
   margin-top: 0px;
   align-items: end;
-  background-color: white;
   font-size: 12px;
   letter-spacing: 2px;
   background-color: rgb(255, 255, 255, 0.86);
   z-index: 3;
+}
+
+.linkstyle {
+  text-decoration: none;
+  color: black;
 }
 
 @media (max-width: 900px) {

@@ -8,6 +8,7 @@ export default function Picture({ one, two, three }) {
         <Image src={one} className={styles.imstyle} />
         <Image src={two} className={styles.imstyle} />
       </div>
+
       <div className={styles.bigimage}>
         <Image src={three} className={styles.bigimstyle} />
       </div>

@@ -1,4 +1,5 @@
 import styles from "./headermobile.module.css";
+import Link from "next/link";
 
 export default function Headermobile() {
   return (
@@ -11,36 +12,32 @@ export default function Headermobile() {
       <nav className={styles.nav}>
         <ul className={styles.menu}>
           <li>
-            <a href="#">ПРО МЕНЕ</a>
+            <Link href="/">ПРО МЕНЕ</Link>
           </li>
           <li>
-            <a href="#">МОЇ ПРОЕКТИ</a>{" "}
+            <Link href="/myproject">МОЇ ПРОЕКТИ</Link>
           </li>
           <li>
-            <a href="#">МОЇ ПОСЛУГИ</a>
+            <Link href="/about">МОЇ ПОСЛУГИ</Link>
           </li>
           <li>
-            <a href="#">МАЙСТЕРКЛАСИ</a>
+            <Link href="#">МАЙСТЕРКА</Link>
           </li>
           <li className={styles.langmenu}>
+            <Link href="#">
+              <div className={styles.langhref}>ESPANOL</div>
+            </Link>
             <a href="#">
-              <div style={{ padding: "0", border: "1px solid teal" }}>
-                ESPANOL
-              </div>
-            </a>
-            <a href="#">
-              <div style={{ padding: "0", border: "1px solid teal" }}>
-                UKRAINIAN
-              </div>
+              <div className={styles.langhref}>UKRAINIAN</div>
             </a>
           </li>
         </ul>
       </nav>
 
       <div className={styles.logo}>
-        <p>YOLANTA KLUSOVSKA</p>
+        <p>ЙОЛАНТА КЛЮСОВСЬКА</p>
         <p style={{ font: "12px Inknut Antiqua" }}>
-          ЛАНДШАФТНИЙ ДИЗАЙН I САДІВНИЦТВО
+          МАЙСТЕРНЯ САДОВОЇ СКУЛЬПТУРИ
         </p>
       </div>
     </div>

@@ -1,5 +1,5 @@
-import Pictureface from "./pictureface";
-import Text from "./text";
+import Pictureface from "../Pictureface/pictureface";
+import Text from "../Text/text";
 
 export default function Bigblockface({ images, text }) {
   const [one] = images;

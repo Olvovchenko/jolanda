@@ -7,14 +7,7 @@ for (let i = 0; i <= 1; i += 0.005) {
   thresholdSets.push(i);
 }
 
-export default function Mainpicture({
-  one,
-  parallax,
-  content,
-  header,
-  // setParallaxMain,
-  // refcontainer,
-}) {
+export default function Mainpicture({ one, parallax, content, header }) {
   const main = useRef(null);
 
   useEffect(() => {
@@ -25,7 +18,7 @@ export default function Mainpicture({
         }%);`;
       }
     }
-    // setParallaxMain(main.current.offsetHeight);
+
     const callback = function (entries, observer) {
       const scrollTopProcent = (window.scrollY / parallax) * 100;
       console.log(
