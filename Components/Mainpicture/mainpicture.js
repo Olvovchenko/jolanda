@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import styles from "./picture.module.css";
+import styles from "./mainpicture.module.css";
 import Image from "next/image";
 import { isForStatement } from "typescript";
 const thresholdSets = [];
@@ -11,7 +11,7 @@ export default function Mainpicture({ one, parallax, content, header }) {
   const main = useRef(null);
 
   useEffect(() => {
-    function setParallaxItemStyle(scrollTopProcent, scrollY) {
+    function setParallaxItemStyle(scrollTopProcent) {
       if (main.current) {
         main.current.style.cssText = `transform: translate(0%, -${
           scrollTopProcent / 2
@@ -27,7 +27,7 @@ export default function Mainpicture({ one, parallax, content, header }) {
         window.scrollY,
         parallax
       );
-      setParallaxItemStyle(scrollTopProcent, window.scrollY);
+      setParallaxItemStyle(scrollTopProcent);
     };
     const observer = new IntersectionObserver(callback, {
       threshold: thresholdSets,

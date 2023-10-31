@@ -1,5 +1,7 @@
 import styles from "./headermobile.module.css";
 import Link from "next/link";
+import { viaodalibre } from "../../styles/fonts";
+import { opensans } from "../../styles/fonts";
 
 export default function Headermobile() {
   return (
@@ -10,7 +12,7 @@ export default function Headermobile() {
       </label>
 
       <nav className={styles.nav}>
-        <ul className={styles.menu}>
+        <ul className={styles.menu} style={opensans.style}>
           <li>
             <Link href="/">ПРО МЕНЕ</Link>
           </li>
@@ -18,7 +20,7 @@ export default function Headermobile() {
             <Link href="/myproject">МОЇ ПРОЕКТИ</Link>
           </li>
           <li>
-            <Link href="/about">МОЇ ПОСЛУГИ</Link>
+            <Link href="/about">ПУБЛІКАЦІЇ І ДОСЯГНЕННЯ</Link>
           </li>
           <li>
             <Link href="#">МАЙСТЕРКА</Link>
@@ -34,9 +36,9 @@ export default function Headermobile() {
         </ul>
       </nav>
 
-      <div className={styles.logo}>
+      <div className={styles.logo} styles={viaodalibre.style}>
         <p>ЙОЛАНТА КЛЮСОВСЬКА</p>
-        <p style={{ font: "12px Inknut Antiqua" }}>
+        <p className={styles.maister} style={viaodalibre.style}>
           МАЙСТЕРНЯ САДОВОЇ СКУЛЬПТУРИ
         </p>
       </div>

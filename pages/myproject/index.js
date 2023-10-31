@@ -30,48 +30,47 @@ import Header from "../../Components/Header/header";
 import Navbar from "../../Components/Navbar/navbar";
 import Text from "../../Components/Text/text";
 
-import Picture from "../../Components/Picture/picture";
 import Minipicture from "../../Components/Minipicture/minipicture";
-import Littleblock from "../../Components/Littleblock/littleblock";
-import Bigblock from "../../Components/Bigblock/bigblock";
+import PictureFour from "../../Components/Picturefour/picturefour";
+import Picture from "../../Components/Picture/picture";
 import Footer from "../../Components/Footer/footer";
 
 export default function MyProject() {
   const inf = [
     {
       images: [dveriold, dveri, littletreeold, littletree],
-      text: "text one",
-      component: Littleblock,
+      // text: "text one",
+      component: PictureFour,
     },
     {
-      images: [bushold, bush, gardennice],
+      images: [bush, bushold, gardennice],
       text: "text one",
-      component: Bigblock,
+      component: Picture,
     },
     {
       images: [pictureold, picturenew, plantold, plant],
       text: "text one",
-      component: Littleblock,
+      component: PictureFour,
     },
     {
       images: [housebush, housebushone, piano],
       text: "text one",
-      component: Bigblock,
+      component: Picture,
     },
     {
       images: [littlebushold, littlebush, manytreeold, manytreenew],
       text: "text one",
-      component: Littleblock,
+      component: PictureFour,
     },
     {
       images: [treeroundold, treeround, street],
       text: "text one",
-      component: Bigblock,
+      component: Picture,
     },
     {
       images: [interesttreeold, interesttree, doubletreeold, doubletree],
       text: "text one",
-      component: Littleblock,
+      component: PictureFour,
     },
   ];
 

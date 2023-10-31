@@ -31,11 +31,17 @@
   display: flex;
   flex-direction: column;
   color: rgb(9, 10, 10);
-  font: 14px Libre Caslon Text;
+  font-size: 14px;
+  letter-spacing: 3px;
 
   max-width: 86%;
   overflow: hidden;
   /* border: 1px solid black; */
+}
+
+.maister {
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 .logo {
   transition: max-width 0.2s ease-out;

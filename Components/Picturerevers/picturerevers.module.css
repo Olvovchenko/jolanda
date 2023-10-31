@@ -1,0 +1,40 @@
+.littleimage {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 72%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .littleimage {
+    width: 100%;
+  }
+}
+
+.bigimage {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 72%;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .bigimage {
+    width: 100%;
+  }
+}
+
+.imstyle {
+  width: 48%;
+  height: auto;
+  border: 1px solid black;
+}
+
+.bigimstyle {
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  border: 1px solid black;
+}

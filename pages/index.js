@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { cormorantgaramond, opensans, viaodalibre } from "../styles/fonts";
 import Header from "../Components/Header/header";
 import Navbar from "../Components/Navbar/navbar";
 import Image from "next/image";
-import golovna from "../Public/golovna.png";
+import golovnatrees from "../Public/golovnatrees.jpg";
 import zarobot from "../public/zarobot.png";
 import Footer from "../Components/Footer/footer";
 import spina from "../Public/spina.png";
@@ -12,20 +13,21 @@ import Mainpicture from "../Components/Mainpicture/mainpicture";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import Text from "../Components/Text/text";
-import Bigblockface from "../Components/Bigblockface/bigblockface";
-import Littleblockface from "../Components/Littleblockface/littlebllockface";
+import PictureSingle from "../Components/Picturesingle/picturesingle";
+import PictureDouble from "../Components/Picturedouble/picturedouble";
+import styles from "./parallax.module.css";
 
 const inf = [
   {
     images: [zarobot],
     text: `Сіла за комп. Віднайшла давні фото, з саду моїх діда й бабці, де я навистригала з самшиту величезні кулі і чудернацькі форми. Тоді мені було 14. Дивне захоплення у підлітка, правда? Тим не менше мене то страшно захоплювало. 
     А далі понеслося. Перший допис у фб та інста. Перший клієнт. І пам'ятаю, як я принесла реальну пачку грошей  додому. Це було щось! Емоції та азарт мене підхопили і рухали далі, вперед.`,
-    component: Bigblockface,
+    component: PictureSingle,
   },
   {
     images: [spina, tachka],
     text: `Потім ставало ще більше садів, де я з жагою працювала до 10 год за день. Це і роботою не називається, а моє старе нове захоплення -  вистригання кущів у різні форми, скульптурне садівництво, або ще як його називають топіарне мистецтво. Стригти кущі, скажу я тобі, це одне задоволення,  медитація, бо думки дурні кудить щезають, а приємні приходять. Торкаєшся рослини і відчуваєш таку приємність, аж мимоволі усміхаєшся. Куди не глянь -  природа, стрижеш собі в красивих садах і купаєшся в тому дзені. Хіба не про це я мріяла?! Захоплення, яке приносить сатисфакцію, приплив енергії, матеріальну винагороду, свободу, пізнання внутрішнього світу, зустріч з цікавими людьми і навіть подорожі. `,
-    component: Littleblockface,
+    component: PictureDouble,
   },
   {
     images: [family],
@@ -53,15 +55,15 @@ const inf = [
     Тож ласкаво прошу на мій сайт. 
     
     Для контакту зі мною пишіть сюди yolantafoto@gmail.com`,
-    component: Bigblockface,
+    component: PictureSingle,
   },
 ];
 
 export default function Home() {
   const [parallax, setParallax] = useState(0);
-  const [parallaxmain, setParallaxMain] = useState(0);
+
   const ref = useRef(null);
-  // const refContainer = useRef(null);
+
   const refContent = useRef(null);
   const refHeader = useRef(null);
 
@@ -70,57 +72,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      style={{
-        // width: "100vw",
-        overFlow: "hidden",
-        // marginRight: "calc(-1 * (100vw - 100%)/2)",
-        // marginLeft: "calc(-1 * (100vw - 100%)/2)",
-      }}
-    >
+    <div ref={ref}>
       <div ref={refHeader}>
         <Header />
       </div>
       <Navbar />
 
       <Mainpicture
-        one={golovna}
+        one={golovnatrees}
         parallax={parallax}
         content={refContent}
         header={refHeader}
-
-        // setParallaxMain={setParallaxMain}
       />
 
-      <div
-        ref={refContent}
-        style={{
-          // width: "100vw",
-          backgroundColor: "white",
-          zIndex: 2,
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <p
-          style={{
-            marginTop: "20px",
-            marginBottom: "20px",
-            fontSize: "18px",
-            letterSpacing: "2px",
-          }}
-        >
-          ІСТОРІЯ ПРО МРІЇ І САДІВНИЦТВО
-        </p>
+      <div ref={refContent} className={styles.refcontent}>
+        <p className={styles.title}>ІСТОРІЯ ПРО МРІЇ І САДІВНИЦТВО</p>
         <Text
           text={`...Я згадала, що за моєю шафою лежать ножиці. Схожі на ті, які мені подарував колись мій дідо. Це був час, період пандемії,  коли я залишилась без заробітку, без грошей, від слова зовсім. Тоді мені прийшла думка взяти листок паперу і написати ВСІ мої вміння будь- які, якими я володію. Писала все: від фотографування, роблення меблів до випікання тістечок. І тут я помічаю, як рука виписує "вмію стригти кущі". Матір божа, я ж зовсім забула про це! 
 Такі відчуття ніби виграла джек пот.`}
         ></Text>
-        {inf.map(({ images, text, component: Component }, i) => (
-          <Component images={images} text={text} key={i} />
+        {inf.map(({ images, text, title, component: Component }, i) => (
+          <Component images={images} title={title} text={text} key={i} />
         ))}
 
         <Footer />
