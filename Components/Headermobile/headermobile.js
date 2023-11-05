@@ -20,10 +20,10 @@ export default function Headermobile() {
             <Link href="/myproject">МОЇ ПРОЕКТИ</Link>
           </li>
           <li>
-            <Link href="/about">ПУБЛІКАЦІЇ І ДОСЯГНЕННЯ</Link>
+            <Link href="/achieve">ПУБЛІКАЦІЇ І ДОСЯГНЕННЯ</Link>
           </li>
           <li>
-            <Link href="#">МАЙСТЕРКА</Link>
+            <Link href="maisterka">МАЙСТЕРКА</Link>
           </li>
           <li className={styles.langmenu}>
             <Link href="#">
