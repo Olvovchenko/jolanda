@@ -2,6 +2,7 @@ import styles from "./headermobile.module.css";
 import Link from "next/link";
 import { viaodalibre } from "../../styles/fonts";
 import { opensans } from "../../styles/fonts";
+import { cormorantgaramond } from "../../styles/fonts";
 
 export default function Headermobile() {
   return (
@@ -14,7 +15,10 @@ export default function Headermobile() {
       <nav className={styles.nav}>
         <ul className={styles.menu} style={opensans.style}>
           <li>
-            <Link href="/">ПРО МЕНЕ</Link>
+            <Link href="/">ГОЛОВНА</Link>
+          </li>
+          <li>
+            <Link href="/about">ПРО МЕНЕ</Link>
           </li>
           <li>
             <Link href="/myproject">МОЇ ПРОЕКТИ</Link>
@@ -38,7 +42,7 @@ export default function Headermobile() {
 
       <div className={styles.logo} styles={viaodalibre.style}>
         <p>ЙОЛАНТА КЛЮСОВСЬКА</p>
-        <p className={styles.maister} style={viaodalibre.style}>
+        <p className={styles.maister} style={cormorantgaramond.style}>
           МАЙСТЕРНЯ САДОВОЇ СКУЛЬПТУРИ
         </p>
       </div>

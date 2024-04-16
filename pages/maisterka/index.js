@@ -28,10 +28,10 @@ import styles from "./maisterka.module.css";
 
 const inf = [
   {
-    images: [superclass, jolant, mastermain],
+    images: [mastermain],
     title: `Майстерклас зі спіральної стрижки`,
     text: `Пару годин роботи з ножницями -і звичайна рослинка перетворюється на витвір мистецтва. А ви отримуєте величезне задоволення і нові навички!`,
-    component: Picture,
+    component: PictureSingle,
   },
   {
     images: [bushwork],
@@ -40,16 +40,16 @@ const inf = [
     component: PictureSingle,
   },
   {
-    images: [scissors, robotaplants, profil],
+    images: [profil],
     title: `Ідеальна терраса`,
     text: `Як отримати радість від спілкування з природою, навіть не виходячи з дому? Дуже просто - облаштуйте свій балкон або террасу улюбленими квітами! Ваш настрій миттєво зміниться`,
-    component: Picture,
+    component: PictureSingle,
   },
   {
-    images: [redtoy, decor],
+    images: [decor],
     title: `Різдвяні прикраси`,
     text: `Створити зимову казку самій - що може бути краще? Прикрась свою оселю і отримай справжній святковий настрій!`,
-    component: PictureDouble,
+    component: PictureSingle,
   },
 ];
 

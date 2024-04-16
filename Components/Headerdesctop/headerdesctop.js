@@ -3,6 +3,7 @@ import styles from "./headerdesctop.module.css";
 import thin from "../../public/thin.png";
 import multi from "../../public/multi.png";
 import { Open_Sans } from "next/font/google";
+import { cormorantgaramond } from "../../styles/fonts";
 import { viaodalibre } from "../../styles/fonts";
 
 const opensans = Open_Sans({ subsets: ["cyrillic"] });
@@ -20,7 +21,7 @@ export default function Headerdesctop() {
         <p className={styles.jolanta} style={viaodalibre.style}>
           ЙОЛАНТА КЛЮСОВСЬКА
         </p>
-        <p className={styles.sculptura} style={viaodalibre.style}>
+        <p className={styles.sculptura} style={cormorantgaramond.style}>
           МАЙСТЕРНЯ САДОВОЇ СКУЛЬПТУРИ
         </p>
       </div>

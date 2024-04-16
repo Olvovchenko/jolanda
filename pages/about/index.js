@@ -1,24 +1,20 @@
 import Link from "next/link";
-import Header from "../Components/Header/header";
-import Navbar from "../Components/Navbar/navbar";
-import Title from "../Components/Title/title";
+import Header from "../../Components/Header/header";
+import Navbar from "../../Components/Navbar/navbar";
+import Title from "../../Components/Title/title";
 import Image from "next/image";
-import golovnatrees from "../Public/golovnatrees.jpg";
-import zarobot from "../public/zarobot.png";
-import Footer from "../Components/Footer/footer";
-import spina from "../Public/spina.png";
-import tachka from "../Public/tachka.png";
-import family from "../Public/family.png";
-import scissors from "../Public/scissors.jpg";
-import jolant from "../Public/jolant.jpg";
-import Mainpicture from "../Components/Mainpicture/mainpicture";
-import { useEffect, useRef } from "react";
-import { useState } from "react";
-import Text from "../Components/Text/text";
-import PictureSingle from "../Components/Picturesingle/picturesingle";
-import PictureDouble from "../Components/Picturedouble/picturedouble";
-import styles from "./parallax.module.css";
-import List from "../Components/List/list";
+
+import zarobot from "../../public/zarobot.png";
+import Footer from "../../Components/Footer/footer";
+import spina from "../../Public/spina.png";
+import tachka from "../../Public/tachka.png";
+import family from "../../Public/family.png";
+
+import Text from "../../Components/Text/text";
+import PictureSingle from "../../Components/Picturesingle/picturesingle";
+import PictureDouble from "../../Components/Picturedouble/picturedouble";
+
+import List from "../../Components/List/list";
 
 const inf = [
   {
@@ -33,7 +29,7 @@ const inf = [
     component: PictureDouble,
   },
   {
-    images: [family],
+    images: [],
     text: `Гаразд, розкажу, де я ще працювала. 
 
     Пам'ятаю як в липні до мене несподівано зателефонували, а я стою у ванній з намиленою головою.  Так от дівчина представилася, що вона з міської ради Львова, бачили б ви тоді мій вираз обличчя))), запиталася мене чи я не проти знятися для їхнього ролику в передвиборчій кампанії мера для проекту озеленення Львова. На що я погодилася. Далі було запрошення від департаменту екології на посаду садівника парку Ів.Франка у Львові та приєднатися до команди садівників Львова. За що я щиро вдячна моїй шефовій Олександрі.  Мої перші 11га, які мені пощастило доглядати. Щасливий рік в класній команді садівників. 
@@ -52,45 +48,20 @@ const list = [
   `Головний садівник парку І. Франка у Львові`,
 ];
 
-export default function Home() {
-  const [parallax, setParallax] = useState(0);
-
-  const ref = useRef(null);
-
-  const refContent = useRef(null);
-  const refHeader = useRef(null);
-
-  useEffect(() => {
-    setParallax(ref.current.offsetHeight);
-  }, []);
-
+export default function About() {
   return (
-    <div ref={ref}>
-      <div ref={refHeader}>
-        <Header />
-      </div>
+    <div>
+      <Header />
       <Navbar />
 
-      <Mainpicture
-        one={golovnatrees}
-        parallax={parallax}
-        content={refContent}
-        header={refHeader}
-      />
-
-      <div ref={refContent} className={styles.refcontent}>
-        <Text
-          text={`Гарне подвір’я, тераса чи балкон — справжнє джерело надхнення і радості! І все це можна створити самотужки, своїми руками. Основи топіарного мистецтва і садової скульптури відкривають безліч нових можливостей, дарують незабутні моменти і відчуття краси!
-Неважливо, де ти знаходишся — у затишному котеджі чи в центрі великого міста— в твоїх силах змінити світ на краще. Доглядаючи за рослинами ти відключишся від повсякденності, отримаєш справжній релакс і насолоду. Приєднуйся до тих, хто любить красу і природу. А я допоможу вдосконалити твої вміння і навички.`}
-        />
-        <PictureDouble images={[scissors, jolant]} />
-        <Text
-          text={`
-Мої курси і майстеркласи підходять як початківцям, так і тим, хто довгий час займається доглядом за деревами і рослинами. Завдяки їм, ти отримаєш новий досвід і зможеш втілити в життя свої ідеї і задуми.  
-Крім того, я надаю індивідуальні консультаціі і створюю проекти під замовлення.
-Зі мною ти відчуєш себе справжнім митцем і майстром своєї справи!`}
-        />
-        {/* <Title title={`Історія про мрії і садівництво`} />
+      <div
+        style={{
+          backgroundColor: "lightgrey",
+          marginTop: "25px",
+          padding: "35px",
+        }}
+      >
+        <Title title={`Історія про мрії і садівництво`} />
         <Text
           text={`...Я згадала, що за моєю шафою лежать ножиці. Схожі на ті, які мені подарував колись мій дідо. Це був час, період пандемії,  коли я залишилась без заробітку, без грошей, від слова зовсім. Тоді мені прийшла думка взяти листок паперу і написати ВСІ мої вміння будь- які, якими я володію. Писала все: від фотографування, роблення меблів до випікання тістечок. І тут я помічаю, як рука виписує "вмію стригти кущі". Матір божа, я ж зовсім забула про це! 
 Такі відчуття ніби виграла джек пот.`}
@@ -109,10 +80,11 @@ export default function Home() {
     
     Тож ласкаво прошу на мій сайт.  
     Для контакту зі мною пишіть сюди yolantafoto@gmail.com`}
-      />*/}
-
-        <Footer />
+        />
+        <PictureSingle images={[family]} />
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -12,10 +12,13 @@ export default function Navbar() {
   return (
     <div className={styles.navdesctop} style={opensans.style}>
       <Link href="/" className={styles.linkstyle}>
+        ГОЛОВНА
+      </Link>
+      <Link href="/about" className={styles.linkstyle}>
         ПРО МЕНЕ
       </Link>
       <Link href="/myproject" className={styles.linkstyle}>
-        МОЇ ПРОКЕТИ
+        МОЇ ПРОЕКТИ
       </Link>
       <Link href="/achieve" className={styles.linkstyle}>
         ПУБЛІКАЦІЇ І ДОСЯГНЕННЯ

@@ -11,8 +11,8 @@ import texteden from "../../public/texteden.png";
 import nagoroda from "../../public/nagoroda.jpg";
 import ivfranka from "../../public/ivfranka.jpg";
 import kiparis from "../../public/kiparis.jpg";
-import hairdress from "../../public/hairdress.jpg";
-import decembermaisterclass from "../../public/decembermaisterclass.jpg";
+import womenflower from "../../public/womenflower.jpg";
+import newmaister from "../../public/newmaister.jpg";
 
 import PictureFour from "../../Components/Picturefour/picturefour";
 
@@ -27,7 +27,7 @@ const inf = [
   },
 
   {
-    images: [kiparis, hairdress, decembermaisterclass],
+    images: [kiparis, womenflower, newmaister],
     // title: `Майстреклас:фігурна стрижка кіпарису`,
     text: `В грудні 2021 року відбувся мій авторський майстерклас "Фігурна стрижка кіпарису". Учні вчились правильно тримати інструменти, надавати форму і правильно працювати з рослинами`,
     component: Picture,
