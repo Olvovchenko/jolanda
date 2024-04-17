@@ -9,15 +9,16 @@
 .footicon {
   width: 200px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 34px;
   justify-content: center;
 }
 .imagethin {
-  width: 23px;
-  height: 23.5px;
+  width: 27px;
+  height: 27.5px;
 }
 .imagemulti {
+  /* align-self: center; */
   width: 22px;
   height: 22px;
 }
