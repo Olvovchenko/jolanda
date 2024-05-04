@@ -3,7 +3,7 @@ import Header from "../Components/Header/header";
 import Navbar from "../Components/Navbar/navbar";
 import Title from "../Components/Title/title";
 import Image from "next/image";
-import golovnatrees from "../Public/golovnatrees.jpg";
+import street from "../Public/street.jpg";
 import zarobot from "../public/zarobot.png";
 import Footer from "../Components/Footer/footer";
 import spina from "../Public/spina.png";
@@ -17,6 +17,7 @@ import { useState } from "react";
 import Text from "../Components/Text/text";
 import PictureSingle from "../Components/Picturesingle/picturesingle";
 import PictureDouble from "../Components/Picturedouble/picturedouble";
+import PictureAlone from "../Components/Picturealone/picturealone";
 import styles from "./parallax.module.css";
 import List from "../Components/List/list";
 
@@ -72,7 +73,7 @@ export default function Home() {
       <Navbar />
 
       <Mainpicture
-        one={golovnatrees}
+        one={street}
         parallax={parallax}
         content={refContent}
         header={refHeader}
@@ -83,7 +84,7 @@ export default function Home() {
           text={`Гарне подвір’я, тераса чи балкон — справжнє джерело надхнення і радості! І все це можна створити самотужки, своїми руками. Основи топіарного мистецтва і садової скульптури відкривають безліч нових можливостей, дарують незабутні моменти і відчуття краси!
 Неважливо, де ти знаходишся — у затишному котеджі чи в центрі великого міста— в твоїх силах змінити світ на краще. Доглядаючи за рослинами ти відключишся від повсякденності, отримаєш справжній релакс і насолоду. Приєднуйся до тих, хто любить красу і природу. А я допоможу вдосконалити твої вміння і навички.`}
         />
-        <PictureDouble images={[scissors, jolant]} />
+        <PictureAlone images={[jolant]} />
         <Text
           text={`
 Мої курси і майстеркласи підходять як початківцям, так і тим, хто довгий час займається доглядом за деревами і рослинами. Завдяки їм, ти отримаєш новий досвід і зможеш втілити в життя свої ідеї і задуми.  

@@ -1,9 +1,9 @@
-import styles from "./picturesingle.module.css";
+import styles from "./picturealone.module.css";
 import Image from "next/image";
 import Text from "../Text/text";
 import Title from "../Title/title";
 
-export default function PictureSingle({ images, text, title }) {
+export default function PictureAlone({ images, text, title }) {
   const [one] = images;
 
   return (

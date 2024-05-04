@@ -22,6 +22,7 @@ import { useState } from "react";
 import PictureRevers from "../../Components/Picturerevers/picturerevers";
 import PictureDouble from "../../Components/Picturedouble/picturedouble";
 import PictureSingle from "../../Components/Picturesingle/picturesingle";
+import PictureAlone from "../../Components/Picturealone/picturealone";
 import Picture from "../../Components/Picture/picture";
 import Littleblockface from "../../Components/Picturedouble/picturedouble";
 import styles from "./maisterka.module.css";
@@ -41,7 +42,7 @@ const inf = [
   },
   {
     images: [profil],
-    title: `Ідеальна терраса`,
+    title: `Ідеальна тераса`,
     text: `Як отримати радість від спілкування з природою, навіть не виходячи з дому? Дуже просто - облаштуйте свій балкон або террасу улюбленими квітами! Ваш настрій миттєво зміниться`,
     component: PictureSingle,
   },
@@ -49,7 +50,7 @@ const inf = [
     images: [decor],
     title: `Різдвяні прикраси`,
     text: `Створити зимову казку самій - що може бути краще? Прикрась свою оселю і отримай справжній святковий настрій!`,
-    component: PictureSingle,
+    component: PictureAlone,
   },
 ];
 

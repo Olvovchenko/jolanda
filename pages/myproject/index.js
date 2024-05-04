@@ -24,11 +24,12 @@ import doubletree from "../../Public/doubletree.png";
 import doubletreeold from "../../Public/doubletreeold.png";
 import gardennice from "../../Public/gardennice.png";
 import piano from "../../Public/piano.png";
-import street from "../../Public/street.jpg";
+import golovnatrees from "../../Public/golovnatrees.jpg";
 
 import Header from "../../Components/Header/header";
 import Navbar from "../../Components/Navbar/navbar";
 import Text from "../../Components/Text/text";
+import PictureSinglereverse from "../../Components/Picturesinglereverse/picturesinglereverse";
 
 import Minipicture from "../../Components/Minipicture/minipicture";
 import PictureFour from "../../Components/Picturefour/picturefour";
@@ -38,39 +39,65 @@ import Footer from "../../Components/Footer/footer";
 export default function MyProject() {
   const inf = [
     {
-      images: [dveriold, dveri, littletreeold, littletree],
-      // text: "text one",
-      component: PictureFour,
-    },
-    {
-      images: [bush, bushold, gardennice],
-      text: "text one",
+      images: [dveriold, dveri],
+      text: 'Ресторан "People Place", Львів',
       component: Picture,
     },
     {
-      images: [pictureold, picturenew, plantold, plant],
-      text: "text one",
-      component: PictureFour,
-    },
-    {
-      images: [housebush, housebushone, piano],
-      text: "text one",
+      images: [littletreeold, littletree, gardennice],
+      text: "Приватний сад",
       component: Picture,
     },
     {
-      images: [littlebushold, littlebush, manytreeold, manytreenew],
-      text: "text one",
-      component: PictureFour,
-    },
-    {
-      images: [treeroundold, treeround, street],
-      text: "text one",
+      images: [bush, bushold],
+
       component: Picture,
     },
     {
-      images: [interesttreeold, interesttree, doubletreeold, doubletree],
-      text: "text one",
-      component: PictureFour,
+      images: [pictureold, picturenew],
+      text: 'Формуюча стрижка ялівця у стилі "Ніваки" ',
+      component: Picture,
+    },
+    {
+      images: [plantold, plant],
+      text: `Підтримуюча стрижкка у формі спиралі. Салон краси "Карвацька. Б'юті"`,
+      component: Picture,
+    },
+    {
+      images: [housebush, housebushone],
+      text: "Перше формування ялівця",
+      component: Picture,
+    },
+    {
+      images: [piano],
+      text: "Приватна колекція топіарних кущів",
+      component: PictureSinglereverse,
+    },
+
+    {
+      images: [littlebushold, littlebush],
+      text: 'Стрижка ялівця. Салон краси "Мартель", Львів',
+      component: Picture,
+    },
+    {
+      images: [manytreeold, manytreenew],
+      text: "Формування живоплоту",
+      component: Picture,
+    },
+    {
+      images: [treeroundold, treeround],
+      text: "Підтримуюча стрижка туї",
+      component: Picture,
+    },
+    {
+      images: [interesttreeold, interesttree],
+      text: 'Ялівець у стилі "Ніваки" ',
+      component: Picture,
+    },
+    {
+      images: [doubletreeold, doubletree],
+      text: "Підтримуюча стрижка ансамблю у вірменському дворику.Львів.",
+      component: Picture,
     },
   ];
 
@@ -79,8 +106,8 @@ export default function MyProject() {
       <Header />
       <Navbar />
 
-      {inf.map(({ images, text, component: Component }) => (
-        <Component images={images} text={text} key={images[0]} />
+      {inf.map(({ images, text, title, component: Component }) => (
+        <Component images={images} text={text} title={title} key={images[0]} />
       ))}
       <Footer />
     </div>

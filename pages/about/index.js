@@ -13,6 +13,7 @@ import family from "../../Public/family.png";
 import Text from "../../Components/Text/text";
 import PictureSingle from "../../Components/Picturesingle/picturesingle";
 import PictureDouble from "../../Components/Picturedouble/picturedouble";
+import PictureSinglereverse from "../../Components/Picturesinglereverse/picturesinglereverse";
 
 import List from "../../Components/List/list";
 
@@ -21,7 +22,7 @@ const inf = [
     images: [zarobot],
     text: `...Я згадала, що за моєю шафою лежать ножиці. Схожі на ті, які мені подарував колись мій дідо. Це був час, період пандемії,  коли я залишилась без заробітку, без грошей, від слова зовсім. Тоді мені прийшла думка взяти листок паперу і написати ВСІ мої вміння будь- які, якими я володію. Писала все: від фотографування, роблення меблів до випікання тістечок. І тут я помічаю, як рука виписує "вмію стригти кущі". Матір божа, я ж зовсім забула про це! 
     Такі відчуття ніби виграла джек пот.`,
-    component: PictureSingle,
+    component: PictureSinglereverse,
   },
   {
     images: [spina, tachka],
@@ -63,17 +64,18 @@ export default function About() {
       <div
         style={{
           backgroundColor: "lightgrey",
-          marginTop: "29px",
-          padding: "40px",
+          marginTop: "5px",
+          paddingBottom: "40px",
+          paddingTop: "40px",
         }}
       >
-        <Title title={`Історія про мрії і садівництво`} />
+        {/* <Title title={`Історія про мрії і садівництво`} /> */}
 
         {inf.map(({ images, text, title, component: Component }, i) => (
           <Component images={images} title={title} text={text} key={i} />
         ))}
         <Text
-          text={`А тепер давайте знайомитись.Звати мене  Йоланта. Вправно володію ножицями та ліплю форми з рослин. Майстер топіарної стрижки, модель, мисткиня. Надихаю і закохую у сад.`}
+          text={`А тепер давайте знайомитись. Звати мене  Йоланта. Вправно володію ножицями та ліплю форми з рослин. Майстер топіарної стрижки, модель, мисткиня. Надихаю і закохую у сад.`}
         />
         <Title title={`Мій професійний шлях`} />
         <List list={list} />
